@@ -25,13 +25,13 @@ setInterval(() =>
           (data) => console.log(chalk.red(`Error when buying order: ${data}`)))
       })
     } else {
-      console.log(chalk.yellow(`${response.ticker.sell} is greater than ${priceToBuy}... trying again in ${process.env.CRAWLER_INTERVAL/1000} seconds`))
+      console.log(chalk.yellow(`${response.ticker.sell} is greater than ${priceToBuy}... \nTrying again in ${process.env.CRAWLER_INTERVAL/1000} seconds`))
     }
   }),
   process.env.CRAWLER_INTERVAL
 )
 
-function getQuantity(coin, price, isBuy, callback) {
+const getQuantity = (coin, price, isBuy, callback) => {
   price = parseFloat(price)
   coin = isBuy ? 'brl' : coin.toLowerCase()
 
@@ -48,5 +48,5 @@ function getQuantity(coin, price, isBuy, callback) {
     }
     callback(parseFloat(balance) - 0.00001) //tira a diferença que se ganha no arredondamento
   }, 
-  (data) => console.log(data))
+    (data) => console.log(data))
 }

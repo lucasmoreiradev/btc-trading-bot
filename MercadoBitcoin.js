@@ -1,4 +1,5 @@
 const unirest = require('unirest')
+const chalk = require('chalk') 
 const ENDPOINT_API = 'https://www.mercadobitcoin.com.br/api/'
 
 class MercadoBitcoin {
@@ -18,7 +19,11 @@ class MercadoBitcoin {
     unirest.get(ENDPOINT_API + this.currency + '/' + method)
       .headers('Accept', 'application/json')
       .end(response => {
-        success(JSON.parse(response.raw_body))
+        try {
+          success(JSON.parse(response.raw_body))
+        } catch(e) {
+          console.log(chalk.red(e))
+        }
       })
   }
 }
