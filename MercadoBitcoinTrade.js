@@ -1,8 +1,9 @@
 const unirest = require('unirest')
+const chalk = require('chalk')
 const qs = require('querystring')
 const crypto = require('crypto')
 const ENDPOINT_API = 'https://www.mercadobitcoin.com.br/api/'
-const ENDPOINT_TRADE_PATH = "/tapi/v3/"
+const ENDPOINT_TRADE_PATH = '/tapi/v3/'
 const ENDPOINT_TRADE_API = 'https://www.mercadobitcoin.net' + ENDPOINT_TRADE_PATH
 
 class MercadoBitcoinTrade {
@@ -52,10 +53,10 @@ class MercadoBitcoinTrade {
                 } else if (error) {
                   error(response.body.error_message)
                 } else {
-                  console.log(response.body)
+                  console.log(chalk.yellow(response.body))
                 }
               } else {
-                console.log(response)
+                console.log(chalk.red(response))
               }
           })
 
