@@ -1,0 +1,30 @@
+{
+  "name": "btc-trading-bot",
+  "version": "0.0.1",
+  "description": "BTC Trading Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fauker/btc-trading-bot.git"
+  },
+  "keywords": [
+    "btc",
+    "trading",
+    "bot"
+  ],
+  "author": "Lucas Moreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fauker/btc-trading-bot/issues"
+  },
+  "homepage": "https://github.com/fauker/btc-trading-bot#readme",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "dotenv-safe": "^5.0.1",
+    "querystring": "^0.2.0",
+    "unirest": "^0.5.1"
+  }
+}
