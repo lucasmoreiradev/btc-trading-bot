@@ -1,5 +1,5 @@
 require("dotenv-safe").load()
-const MercadoBitcoin = require('./api')
+const MercadoBitcoin = require('./MercadoBitcoin')
 const infoApi = new MercadoBitcoin({ currency: 'BTC' })
 
 setInterval(() => 
