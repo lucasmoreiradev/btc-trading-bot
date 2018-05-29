@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/fauker/btc-trading-bot#readme",
   "dependencies": {
+    "chalk": "^2.4.1",
     "crypto": "^1.0.1",
     "dotenv-safe": "^5.0.1",
     "querystring": "^0.2.0",
