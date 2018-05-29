@@ -1,6 +1,6 @@
 {
   "name": "btc-trading-bot",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "BTC Trading Bot",
   "main": "index.js",
   "scripts": {
